@@ -1,4 +1,4 @@
-package com.gmc.action.user;
+package com.gmc.action.member;
 
 import java.io.IOException;
 
@@ -12,9 +12,9 @@ import org.springframework.stereotype.Controller;
 import com.gmc.service.UserServiceImpl;
 import com.opensymphony.xwork2.ActionSupport;
 
-@Namespace("/user")
+@Namespace("/member")
 @Controller
-public class CheckUserNameAction extends ActionSupport{
+public class ResetPassAction extends ActionSupport{
 	private UserServiceImpl userServiceImpl;
 	
 	@Autowired

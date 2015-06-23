@@ -1,24 +1,20 @@
-package com.gmc.action.user;
+package com.gmc.action.member;
 
+import java.io.IOException;
 
 import javax.servlet.http.HttpServletRequest;
 
 import org.apache.struts2.ServletActionContext;
 import org.apache.struts2.convention.annotation.Namespace;
 import org.springframework.beans.factory.annotation.Autowired;
-
 import org.springframework.stereotype.Controller;
 
-
 import com.gmc.service.UserServiceImpl;
-
 import com.opensymphony.xwork2.ActionSupport;
 
-
-
-@Namespace("/user")
+@Namespace("/member")
 @Controller
-public class LoginAction extends ActionSupport{
+public class CheckUserEmailAction extends ActionSupport{
 	private UserServiceImpl userServiceImpl;
 	
 	@Autowired
@@ -26,29 +22,26 @@ public class LoginAction extends ActionSupport{
 		this.userServiceImpl = userServiceImpl;
 	}
 	private HttpServletRequest request;
-	public String execute()  {
+	public String execute() throws IOException  {
 		
 		
 		request = ServletActionContext. getRequest();
-		String user_name = request.getParameter("user_name");
-		String user_pass = request.getParameter("user_pass");
+		String user_email = request.getParameter("user_email");
 		
-		if (user_name==null&&user_pass==null) {
-			
-			return INPUT;
-			
-		}else {
-			boolean flag = userServiceImpl.checkUser(user_name, user_pass);
+		
+		boolean flag = userServiceImpl.checkUserEmail(user_email);
+		
+	
 			
 			if (flag) {
-				request.removeAttribute("message");
-				return SUCCESS;
+				ServletActionContext.getResponse().getWriter().print("true");
 			}else {
-				request.setAttribute("message", "Wrong Username Or Password ！");
-				return INPUT;
+				ServletActionContext.getResponse().getWriter().print("false");
 			}
 			
-		}
+			return null;
+			
+		
 		
 		
 	}

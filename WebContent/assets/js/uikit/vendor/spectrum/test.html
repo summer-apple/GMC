@@ -1,89 +1,101 @@
 <!DOCTYPE html>
 <html lang="en-gb" dir="ltr">
 
-	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<title>Highlight addon - UIkit tests</title>
-		<link rel="stylesheet/less" href="../../src/less/uikit.less">
-		<link rel="stylesheet" href="spectrum.css">
-		<script>var less = { env: "development" };</script>
-		<script src="../../vendor/less.js"></script>
-		<script src="../../vendor/jquery.js"></script>
-		<script src="../../src/js/core.js"></script>
-		<script src="../../src/js/data.js"></script>
-		<script src="spectrum.js"></script>
-		<style type="text/css">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Highlight addon - UIkit tests</title>
+<link rel="stylesheet/less" href="../../src/less/uikit.less">
+<link rel="stylesheet" href="spectrum.css">
+<script>var less = { env: "development" };</script>
+<script src="../../vendor/less.js"></script>
+<script src="../../vendor/jquery.js"></script>
+<script src="../../src/js/core.js"></script>
+<script src="../../src/js/data.js"></script>
+<script src="spectrum.js"></script>
+<style type="text/css">
+body.uk-container-center {
+	max-width: 1000px;
+	padding: 0 20px;
+}
+</style>
+</head>
 
-			body.uk-container-center {
-				max-width: 1000px;
-				padding: 0 20px;
-			}
+<body class="uk-container-center">
 
-		</style>
-	</head>
+	<h1>Highlight</h1>
 
-	<body class="uk-container-center">
+	<h2>Spectrum Colorpicker Crazy Configurator</h2>
+	<div class='alert'>
+		NOTE: this page is currently in development. Please refer to the <a
+			href='http://github.com/bgrins/spectrum'>Home Page</a> for demos and
+		documentation instead.
+	</div>
+	<p>Spectrum can be customized to show and hide different portions
+		of the colorpicker. Try clicking some of the buttons below to see how
+		it can change.</p>
 
-		<h1>Highlight</h1>
+	<div class="example-container">
+		<div class="example-controls">
+			<div class='btn-group'>
+				<button class='uk-button toggleBtn' data-rule='showPalette'>Show
+					Palette</button>
+				<button class='uk-button toggleBtn' data-rule='showInput'>Show
+					Input</button>
+				<button class='uk-button toggleBtn' data-rule='showInitial'>Show
+					Initial</button>
+				<button class='uk-button toggleBtn' data-rule='showAlpha'>Show
+					Alpha</button>
+				<button class='uk-button toggleBtn' data-rule='showPaletteOnly'>Show
+					Palette Only</button>
+			</div>
+			<br> <br>
+			<p>
+				<label>Draggable Size <input type='range' value='172'
+					id='size' max='500' min='50'></label> <label>Hue Size <input
+					type='range' value='16' id='huesize' max='90' min='5'></label>
+			</p>
+		</div>
 
-    <h2>Spectrum Colorpicker Crazy Configurator</h2>
-    <div class='alert'>NOTE: this page is currently in development.  Please refer to the <a href='http://github.com/bgrins/spectrum'>Home Page</a> for demos and documentation instead.
-    </div>
-    <p>
-        Spectrum can be customized to show and hide different portions of the colorpicker.  Try clicking some of the buttons below to see how it can change.
-    </p>
+		<input id="full">
 
-    <div class="example-container">
-        <div class="example-controls">
-            <div class='btn-group'>
-                <button class='uk-button toggleBtn' data-rule='showPalette'>Show Palette</button>
-                <button class='uk-button toggleBtn' data-rule='showInput'>Show Input</button>
-                <button class='uk-button toggleBtn' data-rule='showInitial'>Show Initial</button>
-                <button class='uk-button toggleBtn' data-rule='showAlpha'>Show Alpha</button>
-                <button class='uk-button toggleBtn' data-rule='showPaletteOnly'>Show Palette Only</button>
-            </div>
-            <br>
-            <br>
-            <p>
-            <label>Draggable Size <input type='range' value='172' id='size' max='500' min='50'></label>
+	</div>
 
-            <label>Hue Size <input type='range' value='16' id='huesize' max='90' min='5'></label>
-            </p>
-        </div>
-
-        <input id="full">
-
-    </div>
-
-    <hr>
-    <h2>Spectrum Colorpicker Localization</h2>
-    <div class='alert'>
-        <p>
-            This page has loaded the German localization.  Here is a list of all <a href='https://github.com/bgrins/spectrum/tree/master/i18n'>spectrum localizations</a>.  <strong>Please help expand our localizations</strong>  if you know a language that isn't represented!  You can copy and paste one of the files, and update the text for 'cancel' and 'choose', then submit a pull request at: <a href="https://github.com/bgrins/spectrum">https://github.com/bgrins/spectrum</a>.
-        </p>
-    </div>
+	<hr>
+	<h2>Spectrum Colorpicker Localization</h2>
+	<div class='alert'>
+		<p>
+			This page has loaded the German localization. Here is a list of all <a
+				href='https://github.com/bgrins/spectrum/tree/master/i18n'>spectrum
+				localizations</a>. <strong>Please help expand our localizations</strong>
+			if you know a language that isn't represented! You can copy and paste
+			one of the files, and update the text for 'cancel' and 'choose', then
+			submit a pull request at: <a
+				href="https://github.com/bgrins/spectrum">https://github.com/bgrins/spectrum</a>.
+		</p>
+	</div>
 
 	<input id="langdemo">
 
-    <hr>
-    <h2>Spectrum Colorpicker Sample Palettes</h2>
-    <div class='alert'>
+	<hr>
+	<h2>Spectrum Colorpicker Sample Palettes</h2>
+	<div class='alert'>
 
-        <p>
-        NOTE: these palettes are also a work in progress.  Ideally the site will eventually allow you to choose between a few options and download them.
-        </p>
+		<p>NOTE: these palettes are also a work in progress. Ideally the
+			site will eventually allow you to choose between a few options and
+			download them.</p>
 
-        <p>
-        The <code>newGmail</code> palette below is an example of customizing the palette size and layout with CSS.
-        </p>
+		<p>
+			The
+			<code>newGmail</code>
+			palette below is an example of customizing the palette size and
+			layout with CSS.
+		</p>
 
-    </div>
-    <div id="palettes" class="example-container">
+	</div>
+	<div id="palettes" class="example-container"></div>
 
-    </div>
-
-		<script>
+	<script>
 $(function() {
 
     var colorpickerInput = $("#full");
@@ -339,5 +351,5 @@ $(function() {
 });
 		</script>
 
-	</body>
+</body>
 </html>

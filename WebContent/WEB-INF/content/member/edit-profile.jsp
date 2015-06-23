@@ -1,5 +1,6 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
-<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>    
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <%
 String path = request.getContextPath();
 String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
@@ -12,169 +13,177 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<base href="<%=basePath%>">
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	
-	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	<meta name="description" content="Xenon Boostrap Admin Panel" />
-	<meta name="author" content="" />
-	
-	<title>Xenon - Dashboard</title>
+<base href="<%=basePath%>">
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-<%@include file="../component/css.jsp" %>
-	<script src="assets/js/jquery-1.11.1.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="description" content="Xenon Boostrap Admin Panel" />
+<meta name="author" content="" />
 
-	<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
-	<!--[if lt IE 9]>
+<title>Xenon - Dashboard</title>
+
+<%@include file="../component/css.jsp"%>
+<script src="assets/js/jquery-1.11.1.min.js"></script>
+
+<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+<!--[if lt IE 9]>
 		<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
 		<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
 	<![endif]-->
-	
-	
+
+
 </head>
 <body class="page-body">
 
-	<%@ include file="setting.jsp" %>
-	
-	<div class="page-container"><!-- add class "sidebar-collapsed" to close sidebar by default, "chat-visible" to make chat appear always -->
-			
+	<%@ include file="setting.jsp"%>
+
+	<div class="page-container">
+		<!-- add class "sidebar-collapsed" to close sidebar by default, "chat-visible" to make chat appear always -->
+
 		<!-- Add "fixed" class to make the sidebar fixed always to the browser viewport. -->
 		<!-- Adding class "toggle-others" will keep only one menu item open at a time. -->
 		<!-- Adding class "collapsed" collapse sidebar root elements and show only icons. -->
-		
-		<%@ include file="user-bar.jsp" %>
+
+		<%@ include file="user-bar.jsp"%>
 		<div class="main-content">
-					
-			<%@ include file="../component/top-bar.jsp" %>
-			
+
+			<%@ include file="../component/top-bar.jsp"%>
+
 			<div class="page-title">
-				
+
 				<div class="title-env">
 					<h1 class="title">Edit Profile</h1>
 					<p class="description">Update your profile here.</p>
 				</div>
-				
-					<div class="breadcrumb-env">
-					
-								<ol class="breadcrumb bc-1">
-									<li>
-							<a href="user/user-home"><i class="fa-home"></i>Home</a>
+
+				<div class="breadcrumb-env">
+
+					<ol class="breadcrumb bc-1">
+						<li><a href="user/user-home"><i class="fa-home"></i>Home</a>
 						</li>
-								<li>
-						
-										<a href="user/user-profile">Profile</a>
-								</li>
-							<li class="active">
-						
-										<strong>Edit Profile</strong>
-								</li>
-								</ol>
-								
+						<li><a href="user/user-profile">Profile</a></li>
+						<li class="active"><strong>Edit Profile</strong></li>
+					</ol>
+
 				</div>
-					
+
 			</div>
 			<section class="profile-env">
 				<div class="row">
-					
-						<div class="col-sm-3">
-							
-							<!-- User Info Sidebar -->
-							<div class="user-info-sidebar">
-								
-								<a href="#" class="user-img">
-									<img src="assets/images/user-4.png" alt="user-img" class="img-cirlce img-responsive img-thumbnail" width="150px"/>
-								</a>
-								
-		
-								
-								
-								<button type="button" class="btn btn-success btn-block">
-									Upload Image
-								</button>
-							</div>
-							
+
+					<div class="col-sm-3">
+
+						<!-- User Info Sidebar -->
+						<div class="user-info-sidebar">
+
+							<a href="#" class="user-img"> <img
+								src="assets/images/user-4.png" alt="user-img"
+								class="img-cirlce img-responsive img-thumbnail" width="150px" />
+							</a>
+
+
+
+
+							<button type="button" class="btn btn-success btn-block">
+								Upload Image</button>
 						</div>
-						
-						<div class="col-sm-9">
-			
-							<div class="panel panel-default user-profile">
-								<form class="form-horizontal" action="" method="post">
-									<div class="form-group">
-										<label class="col-sm-2 control-label" for="user-name">Username</label>
-										
-										<div class="col-sm-10">
-											<input type="text" class="form-control" id="user-name" placeholder="Username" disabled>
-										</div>
+
+					</div>
+
+					<div class="col-sm-9">
+
+						<div class="panel panel-default user-profile">
+							<form class="form-horizontal" action="" method="post">
+								<div class="form-group">
+									<label class="col-sm-2 control-label" for="user-name">Username</label>
+
+									<div class="col-sm-10">
+										<input type="text" class="form-control" id="user-name"
+											placeholder="Username" disabled>
 									</div>
-									
-									<div class="form-group">
-										<label class="col-sm-2 control-label" for="nike-name">Nike name</label>
-										
-										<div class="col-sm-10">
-											<input type="text" class="form-control" id="nike-name" placeholder="Nike name">
-										</div>
+								</div>
+
+								<div class="form-group">
+									<label class="col-sm-2 control-label" for="nike-name">Nike
+										name</label>
+
+									<div class="col-sm-10">
+										<input type="text" class="form-control" id="nike-name"
+											placeholder="Nike name">
 									</div>
-									
-									<div class="form-group">
-										<label class="col-sm-2 control-label" for="user-email">Email</label>
-										
-										<div class="col-sm-10">
-											<input type="email" class="form-control" id="user-email" placeholder="Email">
-										</div>
+								</div>
+
+								<div class="form-group">
+									<label class="col-sm-2 control-label" for="user-email">Email</label>
+
+									<div class="col-sm-10">
+										<input type="email" class="form-control" id="user-email"
+											placeholder="Email">
 									</div>
-									
-									<div class="form-group">
-										<label class="col-sm-2 control-label" for="true-name">True Name</label>
-										
-										<div class="col-sm-10">
-											<input type="text" class="form-control" id="true-name" placeholder="True Name">
-										</div>
+								</div>
+
+								<div class="form-group">
+									<label class="col-sm-2 control-label" for="true-name">True
+										Name</label>
+
+									<div class="col-sm-10">
+										<input type="text" class="form-control" id="true-name"
+											placeholder="True Name">
 									</div>
-									
-									<div class="form-group">
-										<label class="col-sm-2 control-label" for="user-local">Local</label>
-										
-										<div class="col-sm-10">
-											<input type="text" class="form-control" id="user-local" placeholder="Local">
-										</div>
+								</div>
+
+								<div class="form-group">
+									<label class="col-sm-2 control-label" for="user-local">Local</label>
+
+									<div class="col-sm-10">
+										<input type="text" class="form-control" id="user-local"
+											placeholder="Local">
 									</div>
-									
-									<div class="form-group">
-										<label class="col-sm-2 control-label" for="user-intro">Personal Intro</label>
-										
-										<div class="col-sm-10">
-											<textarea class="form-control" id="user-intro" placeholder="Personal Intro"></textarea>
-										</div>
+								</div>
+
+								<div class="form-group">
+									<label class="col-sm-2 control-label" for="user-intro">Personal
+										Intro</label>
+
+									<div class="col-sm-10">
+										<textarea class="form-control" id="user-intro"
+											placeholder="Personal Intro"></textarea>
 									</div>
-									
-									<div class="form-group">
-										<label class="col-sm-2 control-label" for="user-gender">Gander</label>
-										
-										<div class="col-sm-10">
-											<input type="text" class="form-control" id="user-gender" placeholder="Gender">
-										</div>
+								</div>
+
+								<div class="form-group">
+									<label class="col-sm-2 control-label" for="user-gender">Gander</label>
+
+									<div class="col-sm-10">
+										<input type="text" class="form-control" id="user-gender"
+											placeholder="Gender">
 									</div>
-									
-									<div class="form-group">
-										<label class="col-sm-2 control-label" for="user-phone">Cell Phone</label>
-										
-										<div class="col-sm-10">
-											<input type="text" class="form-control" id="user-phone" placeholder="Cell Phone">
-										</div>
+								</div>
+
+								<div class="form-group">
+									<label class="col-sm-2 control-label" for="user-phone">Cell
+										Phone</label>
+
+									<div class="col-sm-10">
+										<input type="text" class="form-control" id="user-phone"
+											placeholder="Cell Phone">
 									</div>
-									
-									<div class="form-group">
-										<label class="col-sm-2 control-label" for="user-birth">Birth Day</label>
-										
-										<div class="col-sm-10">
-											<input type="text" class="form-control datepicker" id="user-birth" placeholder="Birth Day">	
-										</div>
-									</div>	
-									
-									<div class="form-group">
+								</div>
+
+								<div class="form-group">
+									<label class="col-sm-2 control-label" for="user-birth">Birth
+										Day</label>
+
+									<div class="col-sm-10">
+										<input type="text" class="form-control datepicker"
+											id="user-birth" placeholder="Birth Day">
+									</div>
+								</div>
+
+								<div class="form-group">
 									<label class="control-label">Select list</label>
-									
+
 									<!-- <script type="text/javascript">
 										jQuery(document).ready(function($)
 										{
@@ -189,7 +198,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 											
 										});
 									</script> -->
-									
+
 									<select class="form-control" id="s2example-1">
 										<option></option>
 										<optgroup label="North America">
@@ -344,78 +353,80 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 											<option>Yemen</option>
 										</optgroup>
 									</select>
-										
-										
+
+
 								</div>
-									
-								</form>
-								
-							</div>
-							
-							<div class="panel store-profile">
-								<dl class="dl-horizontal">
-									<dt>Store Name</dt>
-									<dd>GMCFUER</dd>
-									
-									<dt>Brand</dt>
-									<dd>LUJAN</dd>
-									
-									<dt>Local</dt>
-									<dd>Zhejiang Hangzhou</dd>
-									
-									<dt>Intro</dt>
-									<dd>Lujan  collect the most interesting tings on the earth.</dd>
-									
-									<dt>Store Type</dt>
-									<dd>Personal Part Time</dd><!-- personal-full-time,company -->
-									
-									<dt>Goods Source</dt>
-									<dd>Own Production</dd>
-									
-									<dt>Service Phone</dt>
-									<dd>15757135741</dd>
-									
-									<dt>Store Mail</dt>
-									<dd>gmcfure@store.gmcfe.pub</dd>
-									
-									<dt>Address</dt>
-									<dd>Zhejiang Province Hangzhou City Jianggan District Xueyuan Street No.18</dd>
-									
-									<dt>Logo</dt>
-									<dd></dd>
-									
-								</dl>
-								
-							</div>
-							
+
+							</form>
+
 						</div>
-					
-		
-				
-			</div>
+
+						<div class="panel store-profile">
+							<dl class="dl-horizontal">
+								<dt>Store Name</dt>
+								<dd>GMCFUER</dd>
+
+								<dt>Brand</dt>
+								<dd>LUJAN</dd>
+
+								<dt>Local</dt>
+								<dd>Zhejiang Hangzhou</dd>
+
+								<dt>Intro</dt>
+								<dd>Lujan collect the most interesting tings on the earth.</dd>
+
+								<dt>Store Type</dt>
+								<dd>Personal Part Time</dd>
+								<!-- personal-full-time,company -->
+
+								<dt>Goods Source</dt>
+								<dd>Own Production</dd>
+
+								<dt>Service Phone</dt>
+								<dd>15757135741</dd>
+
+								<dt>Store Mail</dt>
+								<dd>gmcfure@store.gmcfe.pub</dd>
+
+								<dt>Address</dt>
+								<dd>Zhejiang Province Hangzhou City Jianggan District
+									Xueyuan Street No.18</dd>
+
+								<dt>Logo</dt>
+								<dd></dd>
+
+							</dl>
+
+						</div>
+
+					</div>
+
+
+
+				</div>
 			</section>
 			<!-- Main Footer -->
 			<!-- Choose between footer styles: "footer-type-1" or "footer-type-2" -->
 			<!-- Add class "sticky" to  always stick the footer to the end of page (if page contents is small) -->
 			<!-- Or class "fixed" to  always fix the footer to the end of page -->
-			<%@ include file="../component/footer.jsp" %>
+			<%@ include file="../component/footer.jsp"%>
 		</div>
-		
-		<%@ include file="../component/chat.jsp" %>
-		
+
+		<%@ include file="../component/chat.jsp"%>
+
 	</div>
-	
-	
+
+
 	<div class="page-loading-overlay">
 		<div class="loader-2"></div>
 	</div>
-	
 
 
 
-<%@ include file="../component/script.jsp" %>
-<script src="assets/js/datepicker/bootstrap-datepicker.js"></script>
- <script type="text/javascript">
+
+	<%@ include file="../component/script.jsp"%>
+	<script src="assets/js/datepicker/bootstrap-datepicker.js"></script>
+	<script type="text/javascript">
  
  (function(){
 

@@ -1,4 +1,4 @@
-package com.gmc.action.user;
+package com.gmc.action.member;
 
 import java.io.IOException;
 
@@ -12,9 +12,9 @@ import org.springframework.stereotype.Controller;
 import com.gmc.service.UserServiceImpl;
 import com.opensymphony.xwork2.ActionSupport;
 
-@Namespace("/user")
+@Namespace("/member")
 @Controller
-public class CheckUserEmailAction extends ActionSupport{
+public class CheckUserNameAction extends ActionSupport{
 	private UserServiceImpl userServiceImpl;
 	
 	@Autowired
@@ -26,10 +26,10 @@ public class CheckUserEmailAction extends ActionSupport{
 		
 		
 		request = ServletActionContext. getRequest();
-		String user_email = request.getParameter("user_email");
+		String user_name = request.getParameter("user_name");
 		
 		
-		boolean flag = userServiceImpl.checkUserEmail(user_email);
+		boolean flag = userServiceImpl.checkUserName(user_name);
 		
 	
 			

@@ -1,5 +1,6 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
-<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>    
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <%
 String path = request.getContextPath();
 String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
@@ -12,43 +13,44 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<base href="<%=basePath%>">
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	
-	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	<meta name="description" content="Xenon Boostrap Admin Panel" />
-	<meta name="author" content="" />
-	
-	<title>Xenon - Dashboard</title>
+<base href="<%=basePath%>">
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-	<%@ include file="../component/css.jsp" %>
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="description" content="Xenon Boostrap Admin Panel" />
+<meta name="author" content="" />
 
-	<script src="assets/js/jquery-1.11.1.min.js"></script>
+<title>Xenon - Dashboard</title>
 
-	<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
-	<!--[if lt IE 9]>
+<%@ include file="../component/css.jsp"%>
+
+<script src="assets/js/jquery-1.11.1.min.js"></script>
+
+<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+<!--[if lt IE 9]>
 		<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
 		<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
 	<![endif]-->
-	
-	
+
+
 </head>
 <body class="page-body">
 
-	<%@ include file="setting.jsp" %>
-	
-	<div class="page-container"><!-- add class "sidebar-collapsed" to close sidebar by default, "chat-visible" to make chat appear always -->
-			
+	<%@ include file="setting.jsp"%>
+
+	<div class="page-container">
+		<!-- add class "sidebar-collapsed" to close sidebar by default, "chat-visible" to make chat appear always -->
+
 		<!-- Add "fixed" class to make the sidebar fixed always to the browser viewport. -->
 		<!-- Adding class "toggle-others" will keep only one menu item open at a time. -->
 		<!-- Adding class "collapsed" collapse sidebar root elements and show only icons. -->
-		
-		<%@ include file="user-bar.jsp" %>
+
+		<%@ include file="user-bar.jsp"%>
 		<div class="main-content">
-					
-			<%@ include file="../component/top-bar.jsp" %>
-			
+
+			<%@ include file="../component/top-bar.jsp"%>
+
 			<script type="text/javascript">
 				jQuery(document).ready(function($)
 				{	
@@ -534,162 +536,177 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 					return randInt;
 				}
 			</script>
-			
+
 			<div class="row">
 				<div class="col-sm-3">
-					
-					<div class="xe-widget xe-counter" data-count=".num" data-from="0" data-to="99.9" data-suffix="%" data-duration="2">
+
+					<div class="xe-widget xe-counter" data-count=".num" data-from="0"
+						data-to="99.9" data-suffix="%" data-duration="2">
 						<div class="xe-icon">
 							<i class="linecons-cloud"></i>
 						</div>
 						<div class="xe-label">
-							<strong class="num">0.0%</strong>
-							<span>Server uptime</span>
+							<strong class="num">0.0%</strong> <span>Server uptime</span>
 						</div>
 					</div>
-					
-					<div class="xe-widget xe-counter xe-counter-purple" data-count=".num" data-from="1" data-to="117" data-suffix="k" data-duration="3" data-easing="false">
+
+					<div class="xe-widget xe-counter xe-counter-purple"
+						data-count=".num" data-from="1" data-to="117" data-suffix="k"
+						data-duration="3" data-easing="false">
 						<div class="xe-icon">
 							<i class="linecons-user"></i>
 						</div>
 						<div class="xe-label">
-							<strong class="num">1k</strong>
-							<span>Users Total</span>
+							<strong class="num">1k</strong> <span>Users Total</span>
 						</div>
 					</div>
-					
-					<div class="xe-widget xe-counter xe-counter-info" data-count=".num" data-from="1000" data-to="2470" data-duration="4" data-easing="true">
+
+					<div class="xe-widget xe-counter xe-counter-info" data-count=".num"
+						data-from="1000" data-to="2470" data-duration="4"
+						data-easing="true">
 						<div class="xe-icon">
 							<i class="linecons-camera"></i>
 						</div>
 						<div class="xe-label">
-							<strong class="num">1000</strong>
-							<span>New Daily Photos</span>
+							<strong class="num">1000</strong> <span>New Daily Photos</span>
 						</div>
 					</div>
-					
+
 				</div>
 				<div class="col-sm-6">
-					
+
 					<div class="chart-item-bg">
 						<div class="chart-label">
-							<div class="h3 text-secondary text-bold" data-count="this" data-from="0.00" data-to="14.85" data-suffix="%" data-duration="1">0.00%</div>
+							<div class="h3 text-secondary text-bold" data-count="this"
+								data-from="0.00" data-to="14.85" data-suffix="%"
+								data-duration="1">0.00%</div>
 							<span class="text-medium text-muted">More visitors</span>
 						</div>
 						<div id="pageviews-visitors-chart" style="height: 298px;"></div>
 					</div>
-					
+
 				</div>
 				<div class="col-sm-3">
-					
+
 					<div class="chart-item-bg">
 						<div class="chart-label chart-label-small">
-							<div class="h4 text-purple text-bold" data-count="this" data-from="0.00" data-to="95.8" data-suffix="%" data-duration="1.5">0.00%</div>
-							<span class="text-small text-upper text-muted">Current Server Uptime</span>
+							<div class="h4 text-purple text-bold" data-count="this"
+								data-from="0.00" data-to="95.8" data-suffix="%"
+								data-duration="1.5">0.00%</div>
+							<span class="text-small text-upper text-muted">Current
+								Server Uptime</span>
 						</div>
 						<div id="server-uptime-chart" style="height: 134px;"></div>
 					</div>
-					
+
 					<div class="chart-item-bg">
 						<div class="chart-label chart-label-small">
-							<div class="h4 text-secondary text-bold" data-count="this" data-from="0.00" data-to="320.45" data-decimal="," data-duration="2">0</div>
-							<span class="text-small text-upper text-muted">Avg. of Sales</span>
+							<div class="h4 text-secondary text-bold" data-count="this"
+								data-from="0.00" data-to="320.45" data-decimal=","
+								data-duration="2">0</div>
+							<span class="text-small text-upper text-muted">Avg. of
+								Sales</span>
 						</div>
-						<div id="sales-avg-chart" style="height: 134px; position: relative;">
-							<div style="position: absolute; top: 25px; right: 0; left: 40%; bottom: 0"></div>
+						<div id="sales-avg-chart"
+							style="height: 134px; position: relative;">
+							<div
+								style="position: absolute; top: 25px; right: 0; left: 40%; bottom: 0"></div>
 						</div>
 					</div>
-					
+
 				</div>
 			</div>
-			
-			
+
+
 			<div class="row">
 				<div class="col-sm-6">
-					
+
 					<div class="chart-item-bg">
 						<div id="pageviews-stats" style="height: 320px; padding: 20px 0;"></div>
-						
+
 						<div class="chart-entry-view">
-							<div class="chart-entry-label">
-								Pageviews
-							</div>
+							<div class="chart-entry-label">Pageviews</div>
 							<div class="chart-entry-value">
 								<div class="sparkline first-month"></div>
 							</div>
 						</div>
-						
+
 						<div class="chart-entry-view">
-							<div class="chart-entry-label">
-								Visitors
-							</div>
+							<div class="chart-entry-label">Visitors</div>
 							<div class="chart-entry-value">
 								<div class="sparkline second-month"></div>
 							</div>
 						</div>
-						
+
 						<div class="chart-entry-view">
-							<div class="chart-entry-label">
-								Converted Sales
-							</div>
+							<div class="chart-entry-label">Converted Sales</div>
 							<div class="chart-entry-value">
 								<div class="sparkline third-month"></div>
 							</div>
 						</div>
 					</div>
-					
+
 				</div>
 				<div class="col-sm-6">
-					
+
 					<div class="chart-item-bg">
 						<div class="chart-label">
-							<div id="network-mbs-packets" class="h1 text-purple text-bold" data-count="this" data-from="0.00" data-to="21.05" data-suffix="mb/s" data-duration="1">0.00mb/s</div>
-							<span class="text-small text-muted text-upper">Download Speed</span>
+							<div id="network-mbs-packets" class="h1 text-purple text-bold"
+								data-count="this" data-from="0.00" data-to="21.05"
+								data-suffix="mb/s" data-duration="1">0.00mb/s</div>
+							<span class="text-small text-muted text-upper">Download
+								Speed</span>
 						</div>
 						<div class="chart-right-legend">
-							<div id="network-realtime-gauge" style="width: 170px; height: 140px"></div>
+							<div id="network-realtime-gauge"
+								style="width: 170px; height: 140px"></div>
 						</div>
 						<div id="realtime-network-stats" style="height: 320px"></div>
 					</div>
-					
+
 					<div class="chart-item-bg">
 						<div class="chart-label">
-							<div id="network-mbs-packets" class="h1 text-secondary text-bold" data-count="this" data-from="0.00" data-to="67.35" data-suffix="%" data-duration="1.5">0.00%</div>
+							<div id="network-mbs-packets" class="h1 text-secondary text-bold"
+								data-count="this" data-from="0.00" data-to="67.35"
+								data-suffix="%" data-duration="1.5">0.00%</div>
 							<span class="text-small text-muted text-upper">CPU Usage</span>
-							
-							<p class="text-medium" style="width: 50%; margin-top: 10px">Sentiments two occasional affronting solicitude travelling and one contrasted. Fortune day out married parties.</p>
+
+							<p class="text-medium" style="width: 50%; margin-top: 10px">Sentiments
+								two occasional affronting solicitude travelling and one
+								contrasted. Fortune day out married parties.</p>
 						</div>
 						<div id="other-stats" style="min-height: 183px">
-							<div id="cpu-usage-gauge" style="width: 170px; height: 140px; position: absolute; right: 20px; top: 20px"></div>
+							<div id="cpu-usage-gauge"
+								style="width: 170px; height: 140px; position: absolute; right: 20px; top: 20px"></div>
 						</div>
 					</div>
-					
+
 				</div>
 			</div>
-			
-			
-			
+
+
+
 			<!-- Main Footer -->
 			<!-- Choose between footer styles: "footer-type-1" or "footer-type-2" -->
 			<!-- Add class "sticky" to  always stick the footer to the end of page (if page contents is small) -->
 			<!-- Or class "fixed" to  always fix the footer to the end of page -->
-			<%@ include file="../component/footer.jsp" %>
+			<%@ include file="../component/footer.jsp"%>
 		</div>
-		
-			
-		<%@ include file="../component/chat.jsp" %>
-		
-		
+
+
+		<%@ include file="../component/chat.jsp"%>
+
+
 	</div>
-	
-	
+
+
 	<div class="page-loading-overlay">
 		<div class="loader-2"></div>
 	</div>
-	
 
 
 
-	<%@ include file="../component/script.jsp" %>
+
+	<%@ include file="../component/script.jsp"%>
 </body>
 </html>
